@@ -486,7 +486,7 @@ if uploaded_txt and uploaded_pdf:
             dados_finais.append((item, novo_nome))
 
     if st.button("Processar e Separar Aulas", type="primary"):
-        with st.spinner("Aplicando crop, dividir páginas e otimizar PDFs..."):
+        with st.spinner("Aplicando crop, separando páginas e otimizando PDFs..."):
             # Salvar PDF temporariamente para leitura por caminhos físicos
             tmp_pdf_path = "temp_input.pdf"
             with open(tmp_pdf_path, "wb") as f:
