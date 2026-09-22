@@ -14,7 +14,7 @@ st.set_page_config(page_title="Separador de Aulas PDF",
                    page_icon="📚", layout="wide")
 
 st.title("📚 Separador Inteligente de Aulas")
-st.markdown("Carregue o sumário (`.txt`), o PDF da apostila e, opcionalmente, a planilha de nomenclatura (`.xlsx`).")
+st.markdown("Carregue o sumário em txt com a numeração das paginas, o PDF do livro e, opcionalmente, a Planilha Excel do Sumário.")
 
 # ==========================================
 # FUNÇÕES AUXILIARES E NORMALIZAÇÃO
