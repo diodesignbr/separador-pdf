@@ -450,8 +450,8 @@ def buscar_nome_na_planilha(item, df_planilha, codigo_pdf_limpo):
 # ==========================================
 
 
-uploaded_txt = st.file_uploader("Ficheiro de Sumário (.txt)", type=["txt"])
-uploaded_pdf = st.file_uploader("Apostila Completa (.pdf)", type=["pdf"])
+uploaded_txt = st.file_uploader("Arquivo de Sumário (.txt)", type=["txt"])
+uploaded_pdf = st.file_uploader("PDF do Livro completo (.pdf)", type=["pdf"])
 uploaded_excel = st.file_uploader(
     "Planilha de Nomenclatura (.xlsx, .xls) - Opcional", type=["xlsx", "xls"])
 
@@ -486,7 +486,7 @@ if uploaded_txt and uploaded_pdf:
             dados_finais.append((item, novo_nome))
 
     if st.button("Processar e Separar Aulas", type="primary"):
-        with st.spinner("A aplicar crop, dividir páginas e otimizar PDFs..."):
+        with st.spinner("Aplicando crop, dividir páginas e otimizar PDFs..."):
             # Salvar PDF temporariamente para leitura por caminhos físicos
             tmp_pdf_path = "temp_input.pdf"
             with open(tmp_pdf_path, "wb") as f:
@@ -529,7 +529,7 @@ if uploaded_txt and uploaded_pdf:
 
             st.success("Processamento concluído com sucesso!")
             st.download_button(
-                label="Descarregar Arquivo ZIP com as Aulas",
+                label="Baixar arquivo ZIP com as aulas",
                 data=zip_buffer.getvalue(),
                 file_name=f"{nome_base}_aulas_separadas.zip",
                 mime="application/zip"
